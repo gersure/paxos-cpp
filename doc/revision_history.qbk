@@ -1,0 +1,28 @@
+[section Revision history]
+
+[heading libpaxos-cpp 0.6.0]
+Releasing version 0.6.0 of libpaxos-cpp, which implements:
+
+* eventual consistency for the learners inside the quorum;
+* a durable storage backend for the acceptors inside the quorum.
+
+This feature release allows a learner to be temporarily shut down or disconnected from the quorum, and automatically catch up with the rest of the quorum upon reconnection.
+
+[heading libpaxos-cpp 0.5.1]
+Bugfix release which fixes two important bugs:
+
+* a race condition in the client when sending requests with high throughput has been fixed;
+* an corner case error that could occur when multiple followers disconnected with the leader at the exact same time could corrupt the connection between the leader and the client.
+
+[heading libpaxos-cpp 0.5.0]
+Releasing version 0.5.0 of libpaxos-cpp. As you might have noticed, I skipped the 0.4 release, but only because there has been a huge overhaul of the backend. Essentially we're now using a leader election protocol embedded within the paxos protocol itself, resulting in far more increased reliability and quicker recovery.
+
+As a result of this, the client interface has changed a bit again. Now, there's no need to explicitly start a server or client, it automatically synchronizes with the quorum when you start talking to it. The client now never throws when you call send (), and it automatically retries failed requests before setting the future's value. In other words: the client now never throws on temporary errors.
+
+[heading libpaxos-cpp 0.3.0]
+Releasing version 0.3.0 of libpaxos-cpp, which might be a bit soon, but there client interface has changed a bit. Now, instead of both an async and sync API interface, we're using std::future's in the client API. Furthermore, the connection management mechanism between the leader and followers has been improved.
+
+[heading libpaxos-cpp 0.2.0]
+Releasing version 0.2.0 of libpaxos-cpp, which is the first official version.
+
+[endsect]
