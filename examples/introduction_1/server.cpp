@@ -1,4 +1,4 @@
-#include <paxos++/server.hpp>
+#include "paxos++/server.hpp"
 
 int main ()
 {
@@ -7,7 +7,7 @@ int main ()
                          {
                             return "bar";
                          });
-   
+
    server.add ("127.0.0.1", 1337);
    server.wait ();
 }

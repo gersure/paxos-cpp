@@ -12,6 +12,6 @@ set(SOURCE
 foreach(sourcefile ${SOURCES})
     get_filename_component(exename ${sourcefile} NAME_WE)
     add_executable(${exename}_L1 ${sourcefile})
-    target_link_libraries(${exename} ${PAXOS_LIB})
+    target_link_libraries(${exename}_L1 ${PAXOS_LIB})
 endforeach(sourcefile ${BENCHMARKS})
 

@@ -8,7 +8,7 @@ set(SOURCES
 
 foreach(sourcefile ${SOURCES})
     get_filename_component(exename ${sourcefile} NAME_WE)
-    add_executable(${exename}_I1 ${sourcefile} depends PAXOS-CPP_STATIC_LIB)
-    target_link_libraries(${exename} PAXOS-CPP_STATIC_LIB)
+    add_executable(${exename}_I1 ${sourcefile})
+    target_link_libraries(${exename}_I1 ${PAXOS_LIB})
 endforeach(sourcefile ${BENCHMARKS})
 

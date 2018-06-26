@@ -24,6 +24,6 @@ else()
   endif()
 endif()
 
-add_subdirectory(paxos-cpp)
+add_subdirectory(paxos++)
 add_subdirectory(examples)
 #add_subdirectory(test)
