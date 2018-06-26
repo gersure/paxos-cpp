@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE library PUBLIC "-//Boost//DTD BoostBook XML V1.0//EN" "boostbook.dtd">
+
+<!--
+  Copyright (c) 2003-2012 Christopher M. Kohlhoff (chris at kohlhoff dot com)
+
+  Distributed under the Boost Software License, Version 1.0. (See accompanying
+  file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+-->
+
+<informaltable frame="all">
+  <tgroup cols="3">
+    <colspec colname="a"/>
+    <colspec colname="b"/>
+    <colspec colname="c"/>
+    <thead>
+      <row>
+        <entry valign="center" namest="a" nameend="c">
+          <bridgehead renderas="sect2">Paxos</bridgehead>
+        </entry>
+      </row>
+    </thead>
+    <tbody>
+      <row>
+        <entry valign="top">
+          <bridgehead renderas="sect3">Classes</bridgehead>
+          <simplelist type="vert" columns="1">
+            <member><link linkend="libpaxos_cpp.reference.client">client</link></member>
+            <member><link linkend="libpaxos_cpp.reference.configuration">configuration</link></member>
+            <member><link linkend="libpaxos_cpp.reference.server">server</link></member>
+          </simplelist>
+        </entry>
+        <entry valign="top">
+          <bridgehead renderas="sect3">Durable storage</bridgehead>
+          <simplelist type="vert" columns="1">
+            <member><link linkend="libpaxos_cpp.reference.durable__heap">heap</link></member>
+            <member><link linkend="libpaxos_cpp.reference.durable__sqlite">sqlite</link></member>
+          </simplelist>
+        </entry>
+        <entry valign="top">
+          <bridgehead renderas="sect3">Exceptions</bridgehead>
+          <simplelist type="vert" columns="1">
+            <member><link linkend="libpaxos_cpp.reference.exception__connection_close">connection_close</link></member>
+            <member><link linkend="libpaxos_cpp.reference.exception__inconsistent_response">inconsistent_response</link></member>
+            <member><link linkend="libpaxos_cpp.reference.exception__incorrect_proposal">incorrect_proposal</link></member>
+            <member><link linkend="libpaxos_cpp.reference.exception__no_leader">no_leader</link></member>
+            <member><link linkend="libpaxos_cpp.reference.exception__no_majority">no_majority</link></member>
+          </simplelist>
+        </entry>
+      </row>
+    </tbody>
+  </tgroup>
+</informaltable>

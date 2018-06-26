@@ -1,0 +1,43 @@
+import os ;
+
+using boostbook
+  : /usr/share/sgml/docbook/stylesheet/xsl/docbook-xsl
+  ;
+
+using quickbook : quickbook ;
+
+using xsltproc : xsltproc ;
+
+
+xml libpaxos-cpp :
+    libpaxos-cpp.qbk ;
+
+boostbook standalone :
+          libpaxos-cpp :
+    <xsl:param>html.stylesheet=boostbook.css          
+    <xsl:param>chapter.autolabel=0
+    <xsl:param>chunk.section.depth=3
+    <xsl:param>chunk.first.sections=1
+    <xsl:param>toc.section.depth=2
+    <xsl:param>toc.max.depth=1
+    <xsl:param>generate.section.toc.level=0
+    <xsl:param>nav.layout=none    
+;
+
+install css :
+    boostbook.css :
+        <location>html
+    ;
+
+install png :
+    [ glob images/*.png ] :
+        <location>html/images
+    ;
+
+install svg :
+    [ glob images/*.svg ] :
+        <location>html/images
+    ;
+
+
+
