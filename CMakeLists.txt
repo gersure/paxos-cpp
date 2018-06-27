@@ -29,4 +29,4 @@ set(LIB_NAME "paxos++")
 
 add_subdirectory(paxos++)
 add_subdirectory(examples)
-#add_subdirectory(test)
+add_subdirectory(test)
