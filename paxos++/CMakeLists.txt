@@ -1,8 +1,8 @@
-#cmake file for libpaxos-cpp
+#cmake file for libpaxos++
 #author changfa.zheng
 
 #project name
-set(PROJECT_NAME paxos-cpp)
+set(PROJECT_NAME ${LIB_NAME})
 string(TOUPPER ${PROJECT_NAME} PROJECT_NAME_UP)
 message(STATUS ${PROJECT_NAME_UP})
 
@@ -50,22 +50,60 @@ configure_file (
 ###########################################################################
 #pragma once
 
-#define PAXOS-CPP_VERSION_MAJOR @PAXOS-CPP_VERSION_MAJOR@
-#define PAXOS-CPP_VERSION_MINOR @PAXOS-CPP_VERSION_MINOR@
-#define PAXOS-CPP_VERSION_FIXED @PAXOS-CPP_VERSION_FIXED@
-#define PAXOS-CPP_GIT_HASH__    @PAXOS-CPP_GIT_HASH@
+#define PAXOS++_VERSION_MAJOR @PAXOS++_VERSION_MAJOR@
+#define PAXOS++_VERSION_MINOR @PAXOS++_VERSION_MINOR@
+#define PAXOS++_VERSION_FIXED @PAXOS++_VERSION_FIXED@
+#define PAXOS++_GIT_HASH__    @PAXOS++_GIT_HASH@
 
-#define PAXOS-CPP_BUILD_TIME__  @PAXOS-CPP_BUILD_TIME@
+#define PAXOS++_BUILD_TIME__  @PAXOS++_BUILD_TIME@
 
 #define _vstr_bind(str) #str
 #define vstr_bind(str) _vstr_bind(str)
 
-#define PAXOS-CPP_GIT_HASH      vstr_bind(PAXOS-CPP_GIT_HASH__)
-#define PAXOS-CPP_BUILD_TIME    vstr_bind(PAXOS-CPP_BUILD_TIME__)
+#define PAXOS++_GIT_HASH      vstr_bind(PAXOS++_GIT_HASH__)
+#define PAXOS++_BUILD_TIME    vstr_bind(PAXOS++_BUILD_TIME__)
 
 ###########################################################################
 
 set(THIRD_PARTH_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party)
+
+set(include_HEADERS
+    detail/client/protocol/request.hpp
+    detail/client/protocol/initiate_request.hpp
+    detail/quorum/client_view.hpp
+    detail/quorum/server_view.hpp
+    detail/quorum/view.hpp
+    detail/quorum/server.hpp
+    detail/request_queue/queue.hpp
+    detail/request_queue/queue.inl
+    detail/strategy/factory.hpp
+    detail/strategy/factory.inl
+    detail/strategy/request.hpp
+    detail/strategy/request.inl
+    detail/strategy/strategy.hpp
+    detail/strategy/strategy.inl
+    detail/strategy/basic_paxos/factory.hpp
+    detail/strategy/basic_paxos/protocol/strategy.hpp
+    detail/util/conversion.hpp
+    detail/util/conversion.inl
+    detail/util/debug.hpp
+    detail/command.hpp
+    detail/command.inl
+    detail/command_dispatcher.hpp
+    detail/error.hpp
+    detail/io_thread.hpp
+    detail/parser.hpp
+    detail/paxos_context.hpp
+    detail/paxos_context.inl
+    detail/tcp_connection.hpp
+    detail/tcp_connection_fwd.hpp
+    durable/heap.hpp
+    durable/storage.hpp
+    exception/exception.hpp
+    client.hpp
+    configuration.hpp
+    server.hpp
+    )
 
 set(SOURCES
     detail/client/protocol/initiate_request.cpp
@@ -104,8 +142,7 @@ set_target_properties(${${PROJECT_NAME_UP}_SHARED_LIB} PROPERTIES
                       VERSION ${${PROJECT_NAME_UP}_VERSION}
                       SOVERSION ${${PROJECT_NAME_UP}_VERSION_MAJOR}
                       CXX_STANDARD 11
-                      OUTPUT_NAME ${PROJECT_NAME})
-
+                      OUTPUT_NAME ${PROJECT_NAME}) 
 add_library(${${PROJECT_NAME_UP}_STATIC_LIB} STATIC ${SOURCES})
 target_link_libraries(${${PROJECT_NAME_UP}_STATIC_LIB}  ${THIRDPARTY_LIBS})
 
@@ -140,6 +177,11 @@ write_basic_package_version_file(
 
 #ARCHIVE特指静态库，LIBRARY特指动态库，RUNTIME
 install(DIRECTORY include/${PROJECT_NAME} COMPONENT devel DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}")
+
+foreach(sourcefile ${include_HEADERS})
+    get_filename_component(inc_path ${sourcefile} PATH)
+    install(FILES ${sourcefile} COMPONENT devel DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}/${inc_path}")
+endforeach(sourcefile ${include_HEADERS})
 
 install(
   TARGETS ${${PROJECT_NAME_UP}_STATIC_LIB}
