@@ -12,7 +12,7 @@ set(SOURCES
 
 foreach(sourcefile ${SOURCES})
     get_filename_component(exename ${sourcefile} NAME_WE)
-    add_executable(${exename}_i ${sourcefile})
-    target_link_libraries(${exename}_i ${PAXOS_LIB} ${THIRDPARTY_LIBS})
+    add_executable(${exename}_b ${sourcefile})
+    target_link_libraries(${exename}_b ${PAXOS_LIB} ${THIRDPARTY_LIBS})
 endforeach(sourcefile ${SOURCES})
 
