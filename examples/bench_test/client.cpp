@@ -47,14 +47,20 @@ int main ()
 {
    paxos::client client;
    client.add ("127.0.0.1", 1337);
-   constexpr int COUNTS=100000;
-   int i = 0, j=COUNTS;
+   constexpr int COUNTS=1000;
+   int i = 0, j=COUNTS, err_count=0;
    Timer timer;
-   while((j--)){
-       std::future <std::string> future = client.send ("foo");
-       assert (future.get () == "bar");
-        i++;
+   while(j--){
+       std::cout<<j<<"\t"<<std::endl;
+       try{
+           std::future <std::string> future = client.send ("foo");
+           assert (future.get () == "bar");
+           i++;
+       }
+       catch(std::exception e){
+           err_count++;
+       }
    }
-   double ops=COUNTS/((double)timer.elapsed_seconds());
-   std::cout<<ops<<std::endl;
+   double ops=COUNTS/((double)timer.elapsed()*1000);
+   std::cout<<"ops:"<<ops<<"\terrors:"<<err_count<<std::endl;
 }
