@@ -28,7 +28,7 @@ endif()
 string(TIMESTAMP ${PROJECT_NAME_UP}_BUILD_TIME "%Y-%m-%d %H:%M" UTC)
 
 find_package(Git)
-if(GIT_FOUND AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.git")
+if(GIT_FOUND AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/../.git")
   if(WIN32)
     #execute_process(COMMAND $ENV{COMSPEC} /C ${GIT_EXECUTABLE} -C ${CMAKE_CURRENT_SOURCE_DIR} rev-parse HEAD OUTPUT_VARIABLE 
     execute_process(COMMAND $ENV{COMSPEC} /C ${GIT_EXECUTABLE} rev-parse HEAD OUTPUT_VARIABLE ${PROJECT_NAME_UP}_GIT_SHA)
@@ -39,13 +39,16 @@ if(GIT_FOUND AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.git")
 else()
   set(${PROJECT_NAME_UP}_GIT_SHA 0)
 endif()
-string(REGEX REPLACE "[^0-9a-f]+" "" ${PROJECT_NAME_UP}_GIT_SHA "${${PROJECT_NAME_UP}_GIT_SHA}")
+string(REGEX REPLACE "[^0-9a-f]+" "" "${${PROJECT_NAME_UP}_GIT_SHA}" "${PROJECT_NAME_UP}_GIT_SHA")
 
-message(STATUS "\tversion: ${${PROJECT_NAME_UP}_VERSION_MAJOR}.${${PROJECT_NAME_UP}_VERSION_MINOR}.${${PROJECT_NAME_UP}_VERSION_FIXED}\n\tgit hash: ${${PROJECT_NAME_UP}_GIT_HASH}\n\tbuild time: ${${PROJECT_NAME_UP}_BUILD_TIME}")
+message(STATUS "\tversion: ${${PROJECT_NAME_UP}_VERSION_MAJOR}.${${PROJECT_NAME_UP}_VERSION_MINOR}.${${PROJECT_NAME_UP}_VERSION_FIXED}\n\tgit hash: ${${PROJECT_NAME_UP}_GIT_SHA}\tbuild time: ${${PROJECT_NAME_UP}_BUILD_TIME}")
+
 configure_file (
-                "${PROJECT_SOURCE_DIR}/version.h.in"
-                "${PROJECT_SOURCE_DIR}/include/${PROJECT_NAME}/version.h"
-                @ONLY )
+    "${CMAKE_CURRENT_SOURCE_DIR}/version.h.in"
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/${PROJECT_NAME}/version.h"
+    #    "${PROJECT_SOURCE_DIR}/version.h.in"
+    #    "${PROJECT_SOURCE_DIR}/include/${PROJECT_NAME}/version.h"
+    @ONLY )
 
 ###########################################################################
 #pragma once
@@ -99,6 +102,8 @@ set(include_HEADERS
     detail/tcp_connection_fwd.hpp
     durable/heap.hpp
     durable/storage.hpp
+    metrics/metrics.hpp
+    util/singleton.hpp
     exception/exception.hpp
     client.hpp
     configuration.hpp
@@ -122,10 +127,22 @@ set(SOURCES
     detail/tcp_connection.cpp
     durable/heap.cpp
     durable/storage.cpp
+    metrics/metrics.cpp
     client.cpp
     configuration.cpp
     server.cpp
    )
+
+set(EXTERN_THIRDPARTY_INCLUDE_PATH
+    ../3rdparty/prometheus/include
+    )
+INCLUDE_DIRECTORIES(${EXTERN_THIRDPARTY_INCLUDE_PATH})
+
+set(EXTERN_THIRDPARTY_LIBS
+    ../3rdparty/lib64/libprometheus-cpp-core.a
+    ../3rdparty/lib64/libprometheus-cpp-pull.a
+    )
+
 
 if(WITH_SQLITE)
     list(APPEND SOURCES durable/sqlite.cpp)
@@ -136,7 +153,7 @@ set(${PROJECT_NAME_UP}_SHARED_LIB ${PROJECT_NAME}-shared${ARTIFACT_SUFFIX})
 set(${PROJECT_NAME_UP}_IMPORT_LIB ${${PROJECT_NAME}_SHARED_LIB})
 
 add_library(${${PROJECT_NAME_UP}_SHARED_LIB} SHARED ${SOURCES})
-target_link_libraries(${${PROJECT_NAME_UP}_SHARED_LIB}  ${THIRDPARTY_LIBS})
+target_link_libraries(${${PROJECT_NAME_UP}_SHARED_LIB}  ${THIRDPARTY_LIBS} ${EXTERN_THIRDPARTY_LIBS})
 set_target_properties(${${PROJECT_NAME_UP}_SHARED_LIB} PROPERTIES
                       LINKER_LANGUAGE CXX
                       VERSION ${${PROJECT_NAME_UP}_VERSION}
@@ -144,7 +161,7 @@ set_target_properties(${${PROJECT_NAME_UP}_SHARED_LIB} PROPERTIES
                       CXX_STANDARD 11
                       OUTPUT_NAME ${PROJECT_NAME}) 
 add_library(${${PROJECT_NAME_UP}_STATIC_LIB} STATIC ${SOURCES})
-target_link_libraries(${${PROJECT_NAME_UP}_STATIC_LIB}  ${THIRDPARTY_LIBS})
+target_link_libraries(${${PROJECT_NAME_UP}_STATIC_LIB}  ${THIRDPARTY_LIBS} ${EXTERN_THIRDPARTY_LIBS})
 
 #add_executable(${PROJECT_NAME} ${SOURCES})
 #target_link_libraries(${PROJECT_NAME}  ${THIRDPARTY_LIBS})
