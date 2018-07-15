@@ -2,7 +2,7 @@
 
 
 Metrics::Metrics()
-    : registry_(std::make_shared<Registry>()),
+    : exposer_(nullptr), registry_(std::make_shared<Registry>()),
     paxos_gauge_family_(BuildGauge().Name("paxos_gauge").Help("paxos gauge family").Register(*registry_)),
     paxos_counter_family_(BuildCounter().Name("paxos_counter").Help("paxos counter family").Register(*registry_)),
     paxos_size_histogram_family_(BuildHistogram().Name("paxos_size_hisgogram").Help("paxos value size histogram family").Register(*registry_)),
@@ -24,3 +24,13 @@ Metrics::Metrics()
 {
 
 }
+
+void Metrics::init(const std::string& addr)
+{
+    exposer_ = std::shared_ptr<Exposer>(new Exposer(addr));
+    exposer_->RegisterCollectable(registry_);
+}
+
+
+
+

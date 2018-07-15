@@ -56,9 +56,11 @@ int main ()
            std::future <std::string> future = client.send ("foo");
            assert (future.get () == "bar");
            i++;
+           std::cout<<"res:"<<":"<<timer.elapsed()<<"ms"<<std::endl;;
        }
        catch(std::exception e){
            err_count++;
+           std::cout<<"err:"<<e.what()<<"\t:"<<timer.elapsed()<<"ms"<<std::endl;;
        }
    }
    double ops=COUNTS/((double)timer.elapsed()*1000);
