@@ -14,7 +14,7 @@ set(${PROJECT_NAME_UP}_VERSION_FIXED 0)
 set(${PROJECT_NAME_UP}_VERSION ${${PROJECT_NAME_UP}_VERSION_MAJOR}.${${PROJECT_NAME_UP}_VERSION_MINOR}.${${PROJECT_NAME_UP}_VERSION_FIXED})
 
 #add some options to control compile
-option(WITH_SQLITE "build with sqlite" OFF)
+option(WITH_SQLITE "build with sqlite" ON)
 if(WITH_SQLITE)
   find_package(sqlite REQUIRED)#REQUIRED 如果包没找到，cmake过程会终止
   if(sqlite_FOUND)
@@ -23,6 +23,7 @@ if(WITH_SQLITE)
     list(APPEND THIRDPARTY_LIBS ${SQLITE_LIBRARIES})
   endif()
 endif()
+
 
 # auto make version and build time message
 string(TIMESTAMP ${PROJECT_NAME_UP}_BUILD_TIME "%Y-%m-%d %H:%M" UTC)

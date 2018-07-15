@@ -5,7 +5,7 @@ SET(PAXOS_LIB ${PROJECT_BINARY_DIR}/${LIB_NAME}/lib${LIB_NAME}.a)
 
 include_directories(${PROJECT_SOURCE_DIR})
 
-set(THIRDPARTY_LIBS "-lboost_thread -lpthread -lboost_serialization -lsqlite3")
+set(THIRDPARTY_LIBS "-lboost_thread -lpthread -lboost_serialization -lsqlite3 -llog4cxx")
 
 #add some options to control compile
 set(SOURCE_C

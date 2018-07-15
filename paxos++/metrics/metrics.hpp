@@ -27,7 +27,7 @@ public:
     val(method, accept,  1, 3, 5, 10, 20, 30, 40, 50, 70, 100, 150, 200, 500, 1000, 3000, 5000, 10000)  \
 
 private:
-//    Exposer  exposer_;
+    std::shared_ptr<Exposer>  exposer_;
     std::shared_ptr<Registry> registry_;
     Family<Gauge>&       paxos_gauge_family_;
     Family<Counter>&     paxos_counter_family_;

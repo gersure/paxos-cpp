@@ -14,6 +14,8 @@
 #ifndef LIBPAXOS_CPP_PAXOS_DETAIL_DEBUG_HPP
 #define LIBPAXOS_CPP_PAXOS_DETAIL_DEBUG_HPP
 
+#define DEBUG
+
 #ifdef DEBUG
 
 /*!
@@ -24,8 +26,8 @@
 #else //!
 
 #define PAXOS_DEBUG(msg)
-#define PAXOS_INFO(msg) 
-#define PAXOS_WARN(msg) 
+#define PAXOS_INFO(msg)
+#define PAXOS_WARN(msg)
 #define PAXOS_ERROR(msg)
 #define PAXOS_FATAL(msg)
 

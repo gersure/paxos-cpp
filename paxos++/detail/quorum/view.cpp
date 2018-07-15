@@ -18,7 +18,7 @@ void
 view::add (
    boost::asio::ip::tcp::endpoint const &       endpoint)
 {
-   servers_.insert (std::make_pair (endpoint, 
+   servers_.insert (std::make_pair (endpoint,
                                     detail::quorum::server (io_service_,
                                                             endpoint)));
 }
