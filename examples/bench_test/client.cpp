@@ -1,68 +1,67 @@
 #include <iostream>
 #include <chrono>
+#include <thread>
+#include <atomic>
+#include <utility>
 #include "paxos++/client.hpp"
+#include "paxos++/util/timer.hpp"
 
 
-class Timer
+void run_bench(paxos::client& client, std::atomic<long>& count, std::atomic<bool>& end)
 {
-public:
-  Timer() : m_begin(std::chrono::high_resolution_clock::now()) {}
-  void reset() { m_begin = std::chrono::high_resolution_clock::now(); }
-  //默认输出毫秒
-  int64_t elapsed() const
-  {
-    return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - m_begin).count();
-  }
-  //微秒
-  int64_t elapsed_micro() const
-  {
-    return std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - m_begin).count();
-  }
-  //纳秒
-  int64_t elapsed_nano() const
-  {
-    return std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::high_resolution_clock::now() - m_begin).count();
-  }
-  //秒
-  int64_t elapsed_seconds() const
-  {
-    return std::chrono::duration_cast<std::chrono::seconds>(std::chrono::high_resolution_clock::now() - m_begin).count();
-  }
-  //分
-  int64_t elapsed_minutes() const
-  {
-    return std::chrono::duration_cast<std::chrono::minutes>(std::chrono::high_resolution_clock::now() - m_begin).count();
-  }
-  //时
-  int64_t elapsed_hours() const
-  {
-    return std::chrono::duration_cast<std::chrono::hours>(std::chrono::high_resolution_clock::now() - m_begin).count();
-  }
-private:
-  std::chrono::time_point<std::chrono::high_resolution_clock> m_begin;
+    long err_count=0;
+    while(!end){
+        try{
+            std::future <std::string> future = client.send ("foo");
+            assert (future.get () == "bar");
+            count++;
+        }
+        catch(std::exception e){
+            err_count++;
+        }
+    }
+}
 
-}; // timer
+//template<typename T, typename... TS>
+//long print_bench(T& l1, TS&... args)
+//{
+//    return l1.load() + print_bench<T>(std::forward<TS&>(args)...);
+//}
+//
+//template<typename T>
+//long print_bench(T& atomic)
+//{
+//    return atomic.load();
+//}
+
+
+
 
 int main ()
 {
    paxos::client client;
    client.add ("127.0.0.1", 1337);
-   constexpr int COUNTS=1000;
-   int i = 0, j=COUNTS, err_count=0;
-   Timer timer;
-   while(j--){
-       try{
-           std::future <std::string> future = client.send ("foo");
-           assert (future.get () == "bar");
-           i++;
-           if (j == (COUNTS-2))
-               timer.reset();
-       }
-       catch(std::exception e){
-           err_count++;
-           std::cout<<"err:"<<e.what()<<"\t:"<<timer.elapsed()<<"ms"<<std::endl;;
-       }
+   std::atomic<bool> end(false);
+
+   constexpr int con = 10;
+   std::thread threads[con];
+
+
+//   std::atomic<long> ato1(1),ato2(1),ato3(1),ato4(1),ato5(1),ato6(1),ato7(1),ato8(1);
+//   std::cout<<"print bench:"<<print_bench(ato1, (ato2), (ato3))<<std::endl;
+
+
+
+   std::atomic<long> ato(0);
+   for (int i=0; i< con; i++){
+       threads[i] = std::thread(std::bind(run_bench, std::ref(client), std::ref(ato), std::ref(end)));
    }
-   double ops=(COUNTS/(double)timer.elapsed())*1000;
-   std::cout<<"ops:"<<ops<<"\terrors:"<<err_count<<std::endl;
+
+
+   while(true){
+       Timer timer;
+       std::this_thread::sleep_for(std::chrono::seconds(2));
+       long total = ato.load();
+       std::cout<<"ops"<<total/((double)timer.elapsed()*1000)<<std::endl;
+   }
 }
