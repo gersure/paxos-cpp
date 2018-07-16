@@ -5,7 +5,7 @@
 #define PAXOS++_VERSION_FIXED 0
 #define PAXOS++_GIT_HASH__    
 
-#define PAXOS++_BUILD_TIME__  2018-07-13 18:16
+#define PAXOS++_BUILD_TIME__  2018-07-16 11:15
 
 #define _vstr_bind(str) #str
 #define vstr_bind(str) _vstr_bind(str)

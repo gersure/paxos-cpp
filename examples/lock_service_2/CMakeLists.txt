@@ -17,9 +17,9 @@ set(SOURCE_S
    datastore.cpp
    )
 
-add_executable(client_L2 ${SOURCE_C})
-target_link_libraries(client_L2 ${PAXOS_LIB} ${THIRDPARTY_LIBS})
+add_executable(client_l2 ${SOURCE_C})
+target_link_libraries(client_l2  ${PAXOS_LIB} ${THIRDPARTY_LIBS})
 
-add_executable(server_L2 ${SOURCE_S})
-target_link_libraries(server_L2 ${PAXOS_LIB} ${THIRDPARTY_LIBS})
+add_executable(server_l2 ${SOURCE_S})
+target_link_libraries(server_l2 ${PAXOS_LIB} ${THIRDPARTY_LIBS})
 

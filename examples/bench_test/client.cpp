@@ -51,18 +51,18 @@ int main ()
    int i = 0, j=COUNTS, err_count=0;
    Timer timer;
    while(j--){
-       std::cout<<j<<"\t"<<std::endl;
        try{
            std::future <std::string> future = client.send ("foo");
            assert (future.get () == "bar");
            i++;
-           std::cout<<"res:"<<":"<<timer.elapsed()<<"ms"<<std::endl;;
+           if (j == (COUNTS-2))
+               timer.reset();
        }
        catch(std::exception e){
            err_count++;
            std::cout<<"err:"<<e.what()<<"\t:"<<timer.elapsed()<<"ms"<<std::endl;;
        }
    }
-   double ops=COUNTS/((double)timer.elapsed()*1000);
+   double ops=(COUNTS/(double)timer.elapsed())*1000;
    std::cout<<"ops:"<<ops<<"\terrors:"<<err_count<<std::endl;
 }
