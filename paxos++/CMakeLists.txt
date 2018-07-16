@@ -14,7 +14,7 @@ set(${PROJECT_NAME_UP}_VERSION_FIXED 0)
 set(${PROJECT_NAME_UP}_VERSION ${${PROJECT_NAME_UP}_VERSION_MAJOR}.${${PROJECT_NAME_UP}_VERSION_MINOR}.${${PROJECT_NAME_UP}_VERSION_FIXED})
 
 #add some options to control compile
-option(WITH_SQLITE "build with sqlite" ON)
+option(WITH_SQLITE "build with sqlite" OFF)
 if(WITH_SQLITE)
   find_package(sqlite REQUIRED)#REQUIRED 如果包没找到，cmake过程会终止
   if(sqlite_FOUND)

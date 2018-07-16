@@ -7,7 +7,9 @@ set(THIRDPARTY_LIBS "-lboost_thread -lpthread -lboost_serialization -llog4cxx")
 
 set(SOURCES
    client.cpp
-   server.cpp
+   server_1337.cpp
+   server_1338.cpp
+   server_1339.cpp
    )
 
 foreach(sourcefile ${SOURCES})

@@ -71,7 +71,7 @@ server::server (
      state_ (processor,
              configuration)
 {
-   /*! 
+   /*!
      Ensure that we start accepting new connections. We do this before
      start (), so that we can first construct multiple servers at the same time,
      and then when they are started, all servers are already accepting connections.
@@ -123,7 +123,7 @@ server::add (
 void
 server::accept ()
 {
-   detail::tcp_connection_ptr connection = 
+   detail::tcp_connection_ptr connection =
       detail::tcp_connection::create (acceptor_.get_io_service ());
 
    acceptor_.async_accept (connection->socket (),
