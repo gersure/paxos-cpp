@@ -244,7 +244,7 @@ private:
       boost::system::error_code const & error);
 
 private:
-
+   callback_type                        processor_;
    paxos::configuration                 default_configuration_;
    detail::io_thread                    io_thread_;
    boost::asio::ip::tcp::acceptor       acceptor_;

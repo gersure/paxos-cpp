@@ -31,7 +31,7 @@ namespace paxos { namespace detail {
   This class keeps track of this state. It ensures every command is associated with an id, and
   if a reply to a specific command is expected, waits until this reply is given (or a timeout).
  */
-class command_dispatcher     
+class command_dispatcher
 {
 public:
 
@@ -48,7 +48,7 @@ public:
       tcp_connection_ptr                connection,
       detail::command const &           command,
       detail::quorum::server_view &     quorum,
-      detail::paxos_context &           state);
+      std::shared_ptr<detail::paxos_context>  state);
 
 private:
 };

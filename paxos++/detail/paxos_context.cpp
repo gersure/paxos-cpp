@@ -18,10 +18,10 @@ paxos_context::paxos_context (
         (strategy::request const &                                                      request,
          detail::request_queue::queue <detail::strategy::request>::guard::pointer       guard)
         {
-           request.global_state_.strategy ().initiate (request.connection_,
+           request.global_state_->strategy ().initiate (request.connection_,
                                                        request.command_,
                                                        request.quorum_,
-                                                       request.global_state_,
+                                                       *request.global_state_,
                                                        guard);
         })
 {

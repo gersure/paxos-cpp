@@ -59,7 +59,8 @@ server::server (
    uint16_t                             port,
    callback_type const &                processor,
    paxos::configuration &               configuration)
-   : acceptor_ (io_service,
+   : processor_(processor),
+     acceptor_ (io_service,
                 boost::asio::ip::tcp::endpoint (
                    boost::asio::ip::address::from_string (host), port)),
 
@@ -145,13 +146,14 @@ server::handle_accept (
       return;
    }
 
+   std::shared_ptr<detail::paxos_context> state(new detail::paxos_context(processor_, default_configuration_));
    new_connection->read_command_loop (
       std::bind (&detail::command_dispatcher::dispatch_command,
                  std::placeholders::_1,
                  new_connection,
                  std::placeholders::_2,
                  std::ref (quorum_),
-                 std::ref (state_)));
+                 (state)));
    /*!
      Enter "recursion" by accepting a new connection
    */

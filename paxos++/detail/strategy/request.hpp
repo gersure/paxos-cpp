@@ -26,7 +26,7 @@ struct request
    detail::tcp_connection_ptr    connection_;
    detail::command               command_;
    detail::quorum::server_view & quorum_;
-   detail::paxos_context &       global_state_;
+   std::shared_ptr<detail::paxos_context>       global_state_;
 };
 
 }; }; };

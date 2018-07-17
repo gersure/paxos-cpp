@@ -14,7 +14,7 @@ command_dispatcher::dispatch_command (
    tcp_connection_ptr                   connection,
    detail::command const &              command,
    detail::quorum::server_view &        quorum,
-   detail::paxos_context &              state)
+   std::shared_ptr<detail::paxos_context> state)
 {
    if (error)
    {
@@ -26,7 +26,7 @@ command_dispatcher::dispatch_command (
    switch (command.type ())
    {
          case command::type_request_initiate:
-            state.request_queue ().push (
+            state->request_queue ().push (
                {
                   connection,
                   command,
@@ -36,14 +36,14 @@ command_dispatcher::dispatch_command (
             break;
 
          case command::type_request_prepare:
-            state.strategy ().prepare (connection,
+            state->strategy ().prepare (connection,
                                        command,
                                        quorum,
                                        state);
-            break;      
+            break;
 
          case command::type_request_accept:
-            state.strategy ().accept (connection,
+            state->strategy ().accept (connection,
                                       command,
                                       quorum,
                                       state);

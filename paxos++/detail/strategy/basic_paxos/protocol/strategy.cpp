@@ -22,7 +22,7 @@ strategy::strategy (
 }
 
 /*! virtual */ void
-strategy::initiate (      
+strategy::initiate (
    tcp_connection_ptr                   client_connection,
    detail::command const &              command,
    detail::quorum::server_view &        quorum,
@@ -30,7 +30,7 @@ strategy::initiate (
    queue_guard_type                     queue_guard)
 {
    /*!
-     If we do not have a the majority of servers alive, it is likely we are having a netsplit 
+     If we do not have a the majority of servers alive, it is likely we are having a netsplit
      and we should never make any progress, to prevent the situation where there are multiple
      representations of the truth in multiple datacenters.
     */
@@ -121,7 +121,7 @@ strategy::send_prepare (
 
    follower_connection->write_command (command);
 
-   PAXOS_DEBUG ("step2 reading command from follower = " << follower_connection.get ());   
+   PAXOS_DEBUG ("step2 reading command from follower = " << follower_connection.get ());
 
    /*!
      We expect either an 'ack' or a 'reject' response to this command.
@@ -142,11 +142,11 @@ strategy::send_prepare (
 }
 
 /*! virtual */ void
-strategy::prepare (      
+strategy::prepare (
    tcp_connection_ptr                   leader_connection,
    detail::command const &              command,
    detail::quorum::server_view &        quorum,
-   detail::paxos_context &              state)
+   std::shared_ptr<detail::paxos_context> state)
 {
    this->process_remote_host_information (command,
                                           quorum);
@@ -198,7 +198,7 @@ strategy::prepare (
    this->add_local_host_information (quorum, response);
 
 
-   PAXOS_DEBUG ("step3 writing command");   
+   PAXOS_DEBUG ("step3 writing command");
 
    leader_connection->write_command (response);
 }
@@ -263,7 +263,7 @@ strategy::receive_promise (
 
    if (state->connections.size () == state->accepted.size ())
    {
-   
+
       boost::optional <enum error_code> last_error;
 
       for (auto const & i : state->accepted)
@@ -284,7 +284,7 @@ strategy::receive_promise (
            it verifies we do not have any error codes floating around.
          */
          PAXOS_ASSERT_EQ (state->error_codes.empty (), true);
-         
+
          /*!
            This means that all nodes in the quorum have responded, and they all agree with
            the proposal id, yay!
@@ -292,7 +292,7 @@ strategy::receive_promise (
            Now that all these nodes have promised to accept any request with the specified
            proposal id, let's send them an accept command.
          */
-         
+
          for (auto & i : state->connections)
          {
             send_accept (client_connection,
@@ -310,7 +310,7 @@ strategy::receive_promise (
          /*!
            This means that every host has given a response, but some errors have occured
            that prevented everyone from sending a promise.
-           
+
            We will send an error command to the client informing about the failed command.
          */
          handle_error (*last_error,
@@ -330,7 +330,7 @@ strategy::send_accept (
    detail::paxos_context &                      global_state,
    std::string const &                          byte_array,
    boost::shared_ptr <struct state>             state)
-{  
+{
    PAXOS_ASSERT_EQ (state->connections[follower_endpoint], follower_connection);
    PAXOS_ASSERT_EQ (state->accepted[follower_endpoint], response_ack);
 
@@ -342,7 +342,7 @@ strategy::send_accept (
      It is possible that the follower lags behind. If this is the case, let's
      send it the history too.
     */
-   int64_t follower_highest_proposal_id = 
+   int64_t follower_highest_proposal_id =
       quorum.lookup_server (follower_endpoint).highest_proposal_id ();
 
    /*!
@@ -357,7 +357,7 @@ strategy::send_accept (
        || command.proposed_workload ().rbegin ()->first == this->proposal_id ())
    {
       /*!
-        This means that either there was no historical data available for the 
+        This means that either there was no historical data available for the
         follower (the most likely case, because that means the follower is up-to-date),
         or it just means the next request will catch him up completely.
 
@@ -365,7 +365,7 @@ strategy::send_accept (
        */
       command.add_proposed_workload (this->proposal_id () + 1,
                                      byte_array);
-   }   
+   }
 
    /*!
      The leader communicates the lowest proposal id currently processed by all hosts
@@ -378,11 +378,11 @@ strategy::send_accept (
 
    this->add_local_host_information (quorum, command);
 
-   PAXOS_DEBUG ("step5 writing command");   
+   PAXOS_DEBUG ("step5 writing command");
 
    follower_connection->write_command (command);
-   
-   PAXOS_DEBUG ("step5 reading command");   
+
+   PAXOS_DEBUG ("step5 reading command");
 
    /*!
      We expect a response to this command.
@@ -402,17 +402,17 @@ strategy::send_accept (
 
 
 /*! virtual */ void
-strategy::accept (      
+strategy::accept (
    tcp_connection_ptr                   leader_connection,
    detail::command const &              command,
    detail::quorum::server_view &        quorum,
-   detail::paxos_context &              state)
+   std::shared_ptr<detail::paxos_context>           state)
 {
    this->process_remote_host_information (command,
                                           quorum);
 
    detail::command response;
-   
+
    /*!
      Default to an 'accepted' response
    */
@@ -426,18 +426,18 @@ strategy::accept (
 
       PAXOS_ASSERT_EQ (i.first, this->proposal_id () + 1);
 
-      /*! 
+      /*!
         First, process the workload and set it as output of the response
       */
       response.add_proposed_workload (i.first,
-                                      state.processor () (i.first,
+                                      state->processor () (i.first,
                                                           i.second));
 
       PAXOS_ASSERT_EQ (response.proposed_workload ().rbegin ()->second.empty (), false);
-      
+
       /*!
-        Now that the workload has been processed, store the currently accepted 
-        proposal/value in our durable storage backend so other nodes can catch up 
+        Now that the workload has been processed, store the currently accepted
+        proposal/value in our durable storage backend so other nodes can catch up
         if they're disconnected for a short timespan.
       */
       storage_.accept (i.first,
@@ -457,7 +457,7 @@ strategy::accept (
        */
       PAXOS_ASSERT_EQ (i.first, this->proposal_id ());
    }
-   
+
 
    PAXOS_DEBUG ("step6 writing command");
 
@@ -509,9 +509,9 @@ strategy::receive_accepted (
 
                /*!
                  Always store the response we received, since we also use that entry to see
-                 whether all hosts have already replied. 
+                 whether all hosts have already replied.
                */
-               state->responses[follower_endpoint]   = 
+               state->responses[follower_endpoint]   =
                   command.proposed_workload ().rbegin ()->second;
 
                PAXOS_ASSERT_EQ (state->responses[follower_endpoint].empty (), false);
@@ -556,14 +556,14 @@ strategy::receive_accepted (
             PAXOS_ASSERT_NE (*last_error, detail::no_error);
          }
       }
-      
+
       if (last_error.is_initialized () == false)
       {
          /*!
            One of the requirements of our protocol is that if one node N1 replies
            to proposal P with response R, node N2 must have the exact same response
            for the same proposal.
-           
+
            The code below validates this requirement.
          */
          for (auto const & i : state->responses)
@@ -583,7 +583,7 @@ strategy::receive_accepted (
 
       if (last_error.is_initialized () == false)
       {
-         PAXOS_DEBUG ("step7 writing command");   
+         PAXOS_DEBUG ("step7 writing command");
          detail::command response;
          response.set_type (command::type_request_accepted);
          response.set_workload (workload);
@@ -621,11 +621,11 @@ strategy::handle_error (
    detail::command response;
    response.set_type (command::type_request_error);
    response.set_error_code (error);
-   
+
    this->add_local_host_information (quorum,
                                      response);
 
-   client_connection->write_command (response);   
+   client_connection->write_command (response);
 }
 
 
@@ -646,7 +646,7 @@ strategy::process_remote_host_information (
    detail::command const &      command,
    quorum::server_view &        output)
 {
-   detail::quorum::server & server = 
+   detail::quorum::server & server =
       output.lookup_server (command.host_endpoint ());
 
    server.set_id (command.host_id ());
