@@ -42,7 +42,7 @@ public:
       tcp_connection_ptr                client_connection,
       detail::command const &           command,
       detail::quorum::server_view &     quorum,
-      detail::paxos_context &           global_state,
+      std::shared_ptr<detail::paxos_context> global_state,
       queue_guard_type                  queue_guard) = 0;
 
 

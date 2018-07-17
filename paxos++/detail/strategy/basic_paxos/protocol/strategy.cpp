@@ -26,7 +26,7 @@ strategy::initiate (
    tcp_connection_ptr                   client_connection,
    detail::command const &              command,
    detail::quorum::server_view &        quorum,
-   detail::paxos_context &              global_state,
+   std::shared_ptr<detail::paxos_context>   global_state,
    queue_guard_type                     queue_guard)
 {
    /*!
@@ -92,7 +92,7 @@ strategy::send_prepare (
    boost::asio::ip::tcp::endpoint const &       follower_endpoint,
    tcp_connection_ptr                           follower_connection,
    detail::quorum::server_view &                quorum,
-   detail::paxos_context &                      global_state,
+   std::shared_ptr<detail::paxos_context>                     global_state,
    std::string const &                          byte_array,
    boost::shared_ptr <struct state>             state)
 {
@@ -135,7 +135,7 @@ strategy::send_prepare (
                  follower_endpoint,
                  follower_connection,
                  std::ref (quorum),
-                 std::ref (global_state),
+                 (global_state),
                  byte_array,
                  std::placeholders::_2,
                  state));
@@ -212,7 +212,7 @@ strategy::receive_promise (
    boost::asio::ip::tcp::endpoint const &       follower_endpoint,
    tcp_connection_ptr                           follower_connection,
    detail::quorum::server_view &                quorum,
-   detail::paxos_context &                      global_state,
+   std::shared_ptr<detail::paxos_context>      global_state,
    std::string                                  byte_array,
    detail::command const &                      command,
    boost::shared_ptr <struct state>             state)
@@ -300,7 +300,7 @@ strategy::receive_promise (
                          i.first,
                          i.second,
                          quorum,
-                         std::ref (global_state),
+                         global_state,
                          byte_array,
                          state);
          }
@@ -327,7 +327,7 @@ strategy::send_accept (
    boost::asio::ip::tcp::endpoint const &       follower_endpoint,
    tcp_connection_ptr                           follower_connection,
    detail::quorum::server_view &                quorum,
-   detail::paxos_context &                      global_state,
+   std::shared_ptr<detail::paxos_context>        global_state,
    std::string const &                          byte_array,
    boost::shared_ptr <struct state>             state)
 {

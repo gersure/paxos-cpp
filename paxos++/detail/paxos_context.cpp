@@ -21,7 +21,7 @@ paxos_context::paxos_context (
            request.global_state_->strategy ().initiate (request.connection_,
                                                        request.command_,
                                                        request.quorum_,
-                                                       *request.global_state_,
+                                                       request.global_state_,
                                                        guard);
         })
 {
