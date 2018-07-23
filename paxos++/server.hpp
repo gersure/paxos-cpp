@@ -250,6 +250,7 @@ private:
    boost::asio::ip::tcp::acceptor       acceptor_;
    detail::quorum::server_view          quorum_;
    detail::paxos_context                state_;
+   callback_type                        processor_;
 };
 
 }

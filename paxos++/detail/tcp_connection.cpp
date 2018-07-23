@@ -11,7 +11,7 @@
 #include "command_dispatcher.hpp"
 #include "tcp_connection.hpp"
 
-namespace paxos { namespace detail { 
+namespace paxos { namespace detail {
 
 
 tcp_connection::tcp_connection (
@@ -27,7 +27,7 @@ tcp_connection::~tcp_connection ()
 
 
 
-/*! static */ tcp_connection_ptr 
+/*! static */ tcp_connection_ptr
 tcp_connection::create (
    boost::asio::io_service &                    io_service)
 {
@@ -77,7 +77,7 @@ tcp_connection::read_command_loop (
    read_command (
       [this,
        callback] (boost::optional <enum error_code>     error,
-                  command const &                       command)
+                  std::shared_ptr<detail::command>              command)
       {
          callback (error,
                    command);
@@ -85,7 +85,7 @@ tcp_connection::read_command_loop (
          if (!error)
          {
             this->read_command_loop (callback);
-            
+
          }
       });
 }
@@ -137,7 +137,7 @@ tcp_connection::start_write_locked ()
 
    boost::asio::async_write (socket_,
                              boost::asio::buffer (write_buffer_),
-                             std::bind (&tcp_connection::handle_write, 
+                             std::bind (&tcp_connection::handle_write,
 
                                         /*!
                                           Using shared_from_this here instead of this ensures that

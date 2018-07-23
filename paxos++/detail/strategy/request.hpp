@@ -24,7 +24,7 @@ namespace paxos { namespace detail { namespace strategy {
 struct request
 {
    detail::tcp_connection_ptr    connection_;
-   detail::command               command_;
+   std::shared_ptr<detail::command> command_;
    detail::quorum::server_view & quorum_;
    detail::paxos_context &       global_state_;
 };

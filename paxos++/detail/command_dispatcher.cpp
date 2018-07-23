@@ -12,7 +12,7 @@ namespace paxos { namespace detail {
 command_dispatcher::dispatch_command (
    boost::optional <enum error_code>    error,
    tcp_connection_ptr                   connection,
-   detail::command const &              command,
+   std::shared_ptr<detail::command>     command,
    detail::quorum::server_view &        quorum,
    detail::paxos_context &              state)
 {
@@ -23,7 +23,7 @@ command_dispatcher::dispatch_command (
       return;
    }
 
-   switch (command.type ())
+   switch (command->type ())
    {
          case command::type_request_initiate:
             state.request_queue ().push (
@@ -40,7 +40,7 @@ command_dispatcher::dispatch_command (
                                        command,
                                        quorum,
                                        state);
-            break;      
+            break;
 
          case command::type_request_accept:
             state.strategy ().accept (connection,

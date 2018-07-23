@@ -17,7 +17,7 @@
 
 #include "error.hpp"
 
-namespace paxos { namespace detail { 
+namespace paxos { namespace detail {
 
 /*!
   \brief Describes command that is exchanged between servers
@@ -64,7 +64,7 @@ public:
     */
    command ();
 
-   static command
+   static std::shared_ptr<command>
    from_string (
       std::string const &               string);
 
@@ -153,7 +153,7 @@ public:
 
    /*!
      \brief Sets multiple workload entries, associated by proposal id
-     
+
      This is sent from leader to follower.
     */
    void
@@ -180,7 +180,7 @@ private:
    void serialize (
       Archive &                 ar,
       unsigned int const        version);
-   
+
 private:
 
    enum type                                            type_;

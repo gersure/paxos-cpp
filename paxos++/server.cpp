@@ -24,6 +24,7 @@ server::server (
              processor,
              default_configuration_)
 {
+    processor_ = processor;
 }
 
 server::server (
@@ -38,6 +39,7 @@ server::server (
              configuration)
 {
    io_thread_.launch ();
+    processor_ = processor;
 }
 
 server::server (
@@ -51,6 +53,7 @@ server::server (
              processor,
              default_configuration_)
 {
+    processor_ = processor;
 }
 
 server::server (
@@ -145,13 +148,14 @@ server::handle_accept (
       return;
    }
 
+   detail::paxos_context *state = new detail::paxos_context(processor_, default_configuration_);
    new_connection->read_command_loop (
       std::bind (&detail::command_dispatcher::dispatch_command,
                  std::placeholders::_1,
                  new_connection,
                  std::placeholders::_2,
                  std::ref (quorum_),
-                 std::ref (state_)));
+                 std::ref (*state)));
    /*!
      Enter "recursion" by accepting a new connection
    */

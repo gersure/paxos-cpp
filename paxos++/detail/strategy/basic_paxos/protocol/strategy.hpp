@@ -37,7 +37,7 @@ private:
       std::map <boost::asio::ip::tcp::endpoint, detail::tcp_connection_ptr>     connections;
       queue_guard_type                                                          queue_guard;
    };
-   
+
 public:
 
    strategy (
@@ -47,7 +47,7 @@ public:
      \brief Received by leader from client that initiates a request
     */
    virtual void
-   initiate (      
+   initiate (
       tcp_connection_ptr                        client_connection,
       detail::command const &                   command,
       detail::quorum::server_view &             quorum,
@@ -59,9 +59,9 @@ public:
      \brief Received by follower when leader wants to prepare a request
     */
    virtual void
-   prepare (      
+   prepare (
       tcp_connection_ptr                        leader_connection,
-      detail::command const &                   command,
+      std::shared_ptr<detail::command>          command,
       detail::quorum::server_view &             quorum,
       detail::paxos_context &                   global_state);
 
@@ -70,13 +70,13 @@ public:
      \brief Received by follower when leader wants to process a request
 
      This request is received by a follower when a leader has received an 'ACK' for a certain
-     proposal id from all followers, and is now telling all followers to actually process a 
+     proposal id from all followers, and is now telling all followers to actually process a
      command.
     */
    virtual void
-   accept (      
+   accept (
       tcp_connection_ptr                        leader_connection,
-      detail::command const &                   command,
+      std::shared_ptr<detail::command>          command,
       detail::quorum::server_view &             quorum,
       detail::paxos_context &                   global_state);
 
@@ -110,7 +110,7 @@ protected:
       detail::quorum::server_view &             quorum,
       detail::paxos_context &                   global_state,
       std::string                               byte_array,
-      detail::command const &                   command,
+      std::shared_ptr<detail::command>          command,
       boost::shared_ptr <struct state>          state);
 
    /*!
@@ -138,7 +138,7 @@ protected:
       detail::command                           client_command,
       boost::asio::ip::tcp::endpoint const &    follower_endpoint,
       detail::quorum::server_view &             quorum,
-      detail::command const &                   command,
+      std::shared_ptr<detail::command>          command,
       boost::shared_ptr <struct state>          state);
 
    /*!

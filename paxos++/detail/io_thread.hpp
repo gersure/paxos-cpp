@@ -52,7 +52,7 @@ public:
 
 private:
 
-   boost::thread                        thread_;
+   std::vector<std::shared_ptr<boost::thread>>                        threads_;
    boost::asio::io_service              io_service_;
    boost::asio::io_service::work        work_;
 };

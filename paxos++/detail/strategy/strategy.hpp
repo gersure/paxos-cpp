@@ -10,11 +10,11 @@
 
 #include "request.hpp"
 
-namespace paxos { namespace detail { namespace quorum { 
+namespace paxos { namespace detail { namespace quorum {
 class server_view;
 }; }; };
 
-namespace paxos { namespace detail { 
+namespace paxos { namespace detail {
 class command;
 class paxos_context;
 }; };
@@ -38,7 +38,7 @@ public:
      \brief Received by leader from client that initiates a request
     */
    virtual void
-   initiate (      
+   initiate (
       tcp_connection_ptr                client_connection,
       detail::command const &           command,
       detail::quorum::server_view &     quorum,
@@ -50,9 +50,9 @@ public:
      \brief Received by follower when leader wants to prepare a request
     */
    virtual void
-   prepare (      
+   prepare (
       tcp_connection_ptr                leader_connection,
-      detail::command const &           command,
+      std::shared_ptr<detail::command>  command,
       detail::quorum::server_view &     quorum,
       detail::paxos_context &           global_state) = 0;
 
@@ -61,13 +61,13 @@ public:
      \brief Received by follower when leader wants to process a request
 
      This request is received by a follower when a leader has received an 'ACK' for a certain
-     proposal id from all followers, and is now telling all followers to actually process a 
+     proposal id from all followers, and is now telling all followers to actually process a
      command.
     */
    virtual void
-   accept (      
+   accept (
       tcp_connection_ptr                leader_connection,
-      detail::command const &           command,
+      std::shared_ptr<detail::command>  command,
       detail::quorum::server_view &     quorum,
       detail::paxos_context &           global_state) = 0;
 

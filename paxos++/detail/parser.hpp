@@ -20,7 +20,7 @@ class parser
 {
 public:
 
-   typedef boost::function <void (boost::optional <enum error_code>, command const &)>  callback_function;
+   typedef boost::function <void (boost::optional <enum error_code>, std::shared_ptr<command>)>  callback_function;
 
    /*!
      \brief Writes command to connection
@@ -34,7 +34,7 @@ public:
 
 
    /*!
-     \brief Reads single command from input stream and dispatches to callback function 
+     \brief Reads single command from input stream and dispatches to callback function
      \param connection  Connection to read from
      \param callback    Callback function object
     */

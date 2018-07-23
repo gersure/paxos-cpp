@@ -14,9 +14,8 @@ io_thread::io_thread ()
 void
 io_thread::launch ()
 {
-   thread_ = std::move (
-      boost::thread (std::bind (&io_thread::run,
-                                this)));
+    for(int i=0; i<5; i++)
+        threads_.push_back(std::shared_ptr<boost::thread>(new boost::thread(std::bind(&io_thread::run, this))));
 }
 
 void
@@ -29,7 +28,8 @@ io_thread::run ()
 void
 io_thread::join ()
 {
-   thread_.join ();
+    for(auto& thread_ : threads_)
+        thread_->join ();
 }
 
 void

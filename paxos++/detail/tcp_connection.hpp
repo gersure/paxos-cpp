@@ -17,7 +17,7 @@
 #include "error.hpp"
 #include "tcp_connection_fwd.hpp"
 
-namespace paxos { 
+namespace paxos {
 class configuration;
 };
 
@@ -30,18 +30,18 @@ namespace paxos { namespace detail { namespace quorum {
 class quorum;
 }; }; };
 
-namespace paxos { namespace detail { 
+namespace paxos { namespace detail {
 
 /*!
   \brief Represents a tcp connection
 
   This is a plain wrapper around a TCP socket.
 
-  Note that this does not necessarily needs to represent a long-lived connection to another 
+  Note that this does not necessarily needs to represent a long-lived connection to another
   server inside the quorum: since the quorum can also build up short-lived connections to each
   other, and clients can also connect to the local server, this can be a connection to anything.
  */
-class tcp_connection 
+class tcp_connection
    : public boost::enable_shared_from_this <tcp_connection>
 {
 public:
@@ -49,7 +49,7 @@ public:
    friend class detail::parser;
 
    typedef boost::function <void (boost::optional <enum error_code>,
-                                  command const &)>                     read_callback;
+                                  std::shared_ptr<command>)>                     read_callback;
 
 public:
    ~tcp_connection ();
