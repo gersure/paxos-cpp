@@ -179,6 +179,8 @@ protected:
 
 
 private:
+   std::mutex           mutex_propose_;
+   std::mutex           mutex_accept_;
 
    durable::storage &   storage_;
 

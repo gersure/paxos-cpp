@@ -227,6 +227,7 @@ strategy::receive_promise (
    }
    else
    {
+      std::unique_lock<std::mutex>  ul(mutex_propose_);
       this->process_remote_host_information (*command,
                                              quorum);
 
@@ -489,6 +490,8 @@ strategy::receive_accepted (
    }
    else
    {
+
+      std::unique_lock<std::mutex>  ul(mutex_accept_);
       this->process_remote_host_information (*command,
                                              quorum);
 
