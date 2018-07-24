@@ -49,7 +49,7 @@ public:
    virtual void
    initiate (
       tcp_connection_ptr                        client_connection,
-      detail::command const &                   command,
+      std::shared_ptr<detail::command>          command,
       detail::quorum::server_view &             quorum,
       detail::paxos_context &                   global_state,
       queue_guard_type                          queue_guard);
@@ -88,7 +88,7 @@ protected:
    virtual void
    send_prepare (
       tcp_connection_ptr                        client_connection,
-      detail::command const &                   client_command,
+      std::shared_ptr<detail::command>          client_command,
       boost::asio::ip::tcp::endpoint const &    follower_endpoint,
       tcp_connection_ptr                        follower_connection,
       detail::quorum::server_view &             quorum,

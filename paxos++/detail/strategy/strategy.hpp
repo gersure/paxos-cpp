@@ -40,7 +40,7 @@ public:
    virtual void
    initiate (
       tcp_connection_ptr                client_connection,
-      detail::command const &           command,
+      std::shared_ptr<detail::command>  command,
       detail::quorum::server_view &     quorum,
       detail::paxos_context &           global_state,
       queue_guard_type                  queue_guard) = 0;
