@@ -10,12 +10,12 @@
 
 #include <boost/asio/ip/tcp.hpp>
 
-#include "detail/strategy/basic_paxos/factory.hpp"
+#include "paxos++/detail/strategy/factory_impl.hpp"
 
-#include "detail/io_thread.hpp"
+#include "paxos++/detail/network/io_thread.hpp"
 #include "detail/paxos_context.hpp"
-#include "detail/quorum/server_view.hpp"
-#include "detail/tcp_connection_fwd.hpp"
+#include "detail/server/server_view.hpp"
+#include "paxos++/detail/network/tcp_connection_fwd.hpp"
 
 #include "configuration.hpp"
 
@@ -61,16 +61,16 @@ namespace paxos {
                                              return output;
                                           });
 
-  boost::asio::io_service io_service;
+  boost::asio::io_context io_service;
 
-  // This prevents the io_service from running out of work
+  // This prevents the io_context from running out of work
   boost::asio::io_service::work work (io_service);
 
   // Launch new thread in the background which calls io_service.run ()
   boost::thread io_thread (boost::bind (&boost::asio::io_service::run,
                                         &io_service));
 
-  // Note that we share the same io_service here, and thus all servers share the same
+  // Note that we share the same io_context here, and thus all servers share the same
   // worker thread.
   paxos::server server1 (io_service, "127.0.0.1", 1337, callback);
   paxos::server server2 (io_service, "127.0.0.1", 1338, callback);
@@ -162,28 +162,28 @@ public:
 
    /*!
      \brief Opens socket to listen on port
-     \param io_service    Boost.Asio io_service object, which represents the link to the OS'es i/o services
+     \param io_context    Boost.Asio io_context object, which represents the link to the OS'es i/o services
      \param server        IPv4 or IPv6 address we're listening at for new connections
      \param port          Port we're listening at to new connections
      \param callback      Callback used to process workload
      \param configuration (Optional) Runtime configuration
    */
    server (
-      boost::asio::io_service &         io_service,
+      boost::asio::io_context &         io_service,
       std::string const &               server,
       uint16_t                          port,
       callback_type const &             callback);
 
    /*!
      \brief Opens socket to listen on port
-     \param io_service    Boost.Asio io_service object, which represents the link to the OS'es i/o services
+     \param io_context    Boost.Asio io_context object, which represents the link to the OS'es i/o services
      \param server        IPv4 or IPv6 address we're listening at for new connections
      \param port          Port we're listening at to new connections
      \param callback      Callback used to process workload
      \param configuration (Optional) Runtime configuration
    */
    server (
-      boost::asio::io_service &         io_service,
+      boost::asio::io_context &         io_service,
       std::string const &               server,
       uint16_t                          port,
       callback_type const &             callback,
@@ -221,7 +221,7 @@ public:
      is useful to let the main () thread block forever.
 
      \note This function will return immediately when  an external worker thread is used
-           to control the boost::asio::io_service object
+           to control the boost::asio::io_context object
     */
    void
    wait ();

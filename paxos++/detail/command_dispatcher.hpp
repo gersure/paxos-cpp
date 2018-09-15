@@ -8,7 +8,7 @@
 #include <boost/optional.hpp>
 
 #include "error.hpp"
-#include "tcp_connection_fwd.hpp"
+#include "network/tcp_connection_fwd.hpp"
 
 namespace paxos { namespace detail {
 class command;

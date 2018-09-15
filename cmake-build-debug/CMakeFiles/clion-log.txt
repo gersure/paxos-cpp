@@ -1,0 +1,8 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/zcf/clion-workspace/paxos-cpp
+-- PAXOS++
+-- 	version: 1.0.0
+	git hash: c3204a5f2ae0cbc011a71ffa4a8f84e5e8761c1b
+	build time: 2018-09-14 06:26
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug

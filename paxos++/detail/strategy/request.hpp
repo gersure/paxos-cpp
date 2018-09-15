@@ -6,7 +6,7 @@
 #define LIBPAXOS_CPP_DETAIL_STRATEGY_REQUEST_HPP
 
 #include "../command.hpp"
-#include "../tcp_connection_fwd.hpp"
+#include "paxos++/detail/network/tcp_connection_fwd.hpp"
 
 namespace paxos { namespace detail {
 class paxos_context;

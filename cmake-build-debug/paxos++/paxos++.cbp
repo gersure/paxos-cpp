@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="paxos++"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\paxos++\;CMake Files\paxos++\cmake\;CMake Files\examples\;CMake Files\examples\bench_test\;CMake Files\examples\introduction_1\;CMake Files\examples\lock_service_1\;CMake Files\examples\lock_service_2\;CMake Files\test\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="paxos++">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/libpaxos++.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp/paxos++"/>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp/paxos++/3rdparty/prometheus/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 paxos++"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="paxos++/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/libpaxos++.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp/paxos++"/>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp/paxos++/3rdparty/prometheus/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 paxos++/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/client.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/client.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/configuration.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/configuration.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/client/client_view.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/client/client_view.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/client/initiate_request.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/client/initiate_request.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/command.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/command.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/command_dispatcher.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/command_dispatcher.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/error.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/error.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/network/io_thread.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/network/io_thread.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/network/parser.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/network/parser.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/network/tcp_connection.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/network/tcp_connection.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/paxos_context.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/paxos_context.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/server/server.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/server/server.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/server/server_view.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/server/server_view.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/strategy/factory_impl.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/strategy/factory_impl.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/strategy/strategy_impl.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/strategy/strategy_impl.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/util/view.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/util/view.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/durable/heap.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/durable/heap.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/durable/storage.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/durable/storage.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/server.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/server.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\paxos++\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/version.h.in">
+			<Option virtualFolder="CMake Files\paxos++\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/cmake/paxos++Config.cmake.in">
+			<Option virtualFolder="CMake Files\paxos++\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/bench_test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\bench_test\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/introduction_1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\introduction_1\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/lock_service_1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\lock_service_1\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/lock_service_2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\lock_service_2\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,5 +1,5 @@
 #include "../detail/util/debug.hpp"
-#include "../detail/quorum/view.hpp"
+#include "../detail/util/view.hpp"
 #include "storage.hpp"
 
 namespace paxos { namespace durable {

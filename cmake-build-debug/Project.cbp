@@ -1,0 +1,1260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\paxos++\;CMake Files\paxos++\cmake\;CMake Files\examples\;CMake Files\examples\bench_test\;CMake Files\examples\introduction_1\;CMake Files\examples\lock_service_1\;CMake Files\examples\lock_service_2\;CMake Files\test\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="paxos++">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/libpaxos++.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp/paxos++"/>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp/paxos++/3rdparty/prometheus/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 paxos++"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="paxos++/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/libpaxos++.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp/paxos++"/>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp/paxos++/3rdparty/prometheus/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 paxos++/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/paxos++/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_1339_b">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/server_1339_b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 server_1339_b"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_1339_b/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/server_1339_b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 server_1339_b/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_1338_b">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/server_1338_b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 server_1338_b"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_1338_b/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/server_1338_b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 server_1338_b/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_1337_b">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/server_1337_b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 server_1337_b"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_1337_b/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/server_1337_b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 server_1337_b/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="client_b">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/client_b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 client_b"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="client_b/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/client_b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 client_b/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/bench_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="client_i">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/client_i" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 client_i"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="client_i/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/client_i" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 client_i/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_i">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/server_i" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 server_i"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_i/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/server_i" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 server_i/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/introduction_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_l1">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/server_l1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 server_l1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_l1/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/server_l1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 server_l1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="client_l1">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/client_l1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 client_l1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="client_l1/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/client_l1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 client_l1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="client_l2">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/client_l2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 client_l2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="client_l2/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/client_l2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 client_l2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_l2">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/server_l2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 server_l2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_l2/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/server_l2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 server_l2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/examples/lock_service_2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="durability2">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/durability2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 durability2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="durability2/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/durability2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 durability2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="connection_close2">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/connection_close2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 connection_close2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="connection_close2/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/connection_close2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 connection_close2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="connection_close1">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/connection_close1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 connection_close1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="connection_close1/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/connection_close1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 connection_close1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="basic5">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/basic5" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 basic5"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="basic5/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/basic5" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 basic5/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="basic4">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/basic4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 basic4"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="basic4/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/basic4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 basic4/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="basic2">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/basic2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 basic2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="basic2/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/basic2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 basic2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="durability3">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/durability3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 durability3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="durability3/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/durability3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 durability3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="basic3">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/basic3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 basic3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="basic3/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/basic3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 basic3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="durability1">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/durability1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 durability1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="durability1/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/durability1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 durability1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="basic1">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/basic1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 basic1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="basic1/fast">
+				<Option output="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/basic1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/zcf/clion-workspace/paxos-cpp"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 basic1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zcf/clion-workspace/paxos-cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/bench_test/client.cpp">
+			<Option target="client_b"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/bench_test/server_1337.cpp">
+			<Option target="server_1337_b"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/bench_test/server_1338.cpp">
+			<Option target="server_1338_b"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/bench_test/server_1339.cpp">
+			<Option target="server_1339_b"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/introduction_1/client.cpp">
+			<Option target="client_i"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/introduction_1/server.cpp">
+			<Option target="server_i"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/lock_service_1/client.cpp">
+			<Option target="client_l1"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/lock_service_1/server.cpp">
+			<Option target="server_l1"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/lock_service_2/client.cpp">
+			<Option target="client_l2"/>
+			<Option target="server_l2"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/lock_service_2/datastore.cpp">
+			<Option target="client_l2"/>
+			<Option target="server_l2"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/lock_service_2/datastore.hpp">
+			<Option target="client_l2"/>
+			<Option target="server_l2"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/client.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/client.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/configuration.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/configuration.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/client/client_view.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/client/client_view.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/client/initiate_request.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/client/initiate_request.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/command.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/command.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/command_dispatcher.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/command_dispatcher.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/error.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/error.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/network/io_thread.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/network/io_thread.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/network/parser.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/network/parser.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/network/tcp_connection.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/network/tcp_connection.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/paxos_context.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/paxos_context.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/server/server.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/server/server.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/server/server_view.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/server/server_view.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/strategy/factory_impl.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/strategy/factory_impl.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/strategy/strategy_impl.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/strategy/strategy_impl.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/util/view.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/detail/util/view.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/durable/heap.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/durable/heap.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/durable/storage.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/durable/storage.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/server.cpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/server.hpp">
+			<Option target="paxos++"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/test/basic1.cpp">
+			<Option target="basic1"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/test/basic2.cpp">
+			<Option target="basic2"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/test/basic3.cpp">
+			<Option target="basic3"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/test/basic4.cpp">
+			<Option target="basic4"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/test/basic5.cpp">
+			<Option target="basic5"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/test/connection_close1.cpp">
+			<Option target="connection_close1"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/test/connection_close2.cpp">
+			<Option target="connection_close2"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/test/durability1.cpp">
+			<Option target="durability1"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/test/durability2.cpp">
+			<Option target="durability2"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/test/durability3.cpp">
+			<Option target="durability3"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\paxos++\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/version.h.in">
+			<Option virtualFolder="CMake Files\paxos++\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/paxos++/cmake/paxos++Config.cmake.in">
+			<Option virtualFolder="CMake Files\paxos++\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/bench_test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\bench_test\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/introduction_1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\introduction_1\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/lock_service_1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\lock_service_1\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/examples/lock_service_2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\lock_service_2\"/>
+		</Unit>
+		<Unit filename="/Users/zcf/clion-workspace/paxos-cpp/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -4,7 +4,7 @@
 #include <boost/asio/deadline_timer.hpp>
 
 #include "detail/util/debug.hpp"
-#include "detail/client/protocol/initiate_request.hpp"
+#include "detail/client/initiate_request.hpp"
 
 #include "configuration.hpp"
 #include "exception/exception.hpp"
@@ -13,13 +13,13 @@
 namespace paxos {
 
 client::client ()
-   : client (io_thread_.io_service ())
+   : client (io_thread_.io_context ())
 {
    io_thread_.launch ();
 }
 
 client::client (
-   boost::asio::io_service &    io_service)
+   boost::asio::io_context &    io_service)
    : io_service_ (io_service),
      quorum_ (io_service),
      request_queue_ (

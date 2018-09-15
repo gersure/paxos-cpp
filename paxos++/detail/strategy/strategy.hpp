@@ -5,7 +5,7 @@
 #ifndef LIBPAXOS_CPP_DETAIL_STRATEGY_STRATEGY_HPP
 #define LIBPAXOS_CPP_DETAIL_STRATEGY_STRATEGY_HPP
 
-#include "../tcp_connection_fwd.hpp"
+#include "../network/tcp_connection_fwd.hpp"
 #include "../request_queue/queue.hpp"
 
 #include "request.hpp"
@@ -32,7 +32,7 @@ protected:
 
 public:
 
-   virtual ~strategy ();
+   virtual ~strategy () {}
 
    /*!
      \brief Received by leader from client that initiates a request
@@ -77,6 +77,6 @@ private:
 
 } }; };
 
-#include "strategy.inl"
+//#include "strategy.inl"
 
 #endif  //! LIBPAXOS_CPP_DETAIL_STRATEGY_STRATEGY_HPP

@@ -72,12 +72,12 @@ configure_file (
 set(THIRD_PARTH_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party)
 
 set(include_HEADERS
-    detail/client/protocol/request.hpp
-    detail/client/protocol/initiate_request.hpp
-    detail/quorum/client_view.hpp
-    detail/quorum/server_view.hpp
-    detail/quorum/view.hpp
-    detail/quorum/server.hpp
+    detail/client/request.hpp
+    detail/client/initiate_request.hpp
+    detail/client/client_view.hpp
+    detail/server/server_view.hpp
+    detail/util/view.hpp
+    detail/server/server.hpp
     detail/request_queue/queue.hpp
     detail/request_queue/queue.inl
     detail/strategy/factory.hpp
@@ -85,9 +85,8 @@ set(include_HEADERS
     detail/strategy/request.hpp
     detail/strategy/request.inl
     detail/strategy/strategy.hpp
-    detail/strategy/strategy.inl
-    detail/strategy/basic_paxos/factory.hpp
-    detail/strategy/basic_paxos/protocol/strategy.hpp
+        detail/strategy/factory_impl.hpp
+    detail/strategy/strategy_impl.hpp
     detail/util/conversion.hpp
     detail/util/conversion.inl
     detail/util/debug.hpp
@@ -95,12 +94,12 @@ set(include_HEADERS
     detail/command.inl
     detail/command_dispatcher.hpp
     detail/error.hpp
-    detail/io_thread.hpp
-    detail/parser.hpp
+    detail/network/io_thread.hpp
+    detail/network/parser.hpp
     detail/paxos_context.hpp
     detail/paxos_context.inl
-    detail/tcp_connection.hpp
-    detail/tcp_connection_fwd.hpp
+    detail/network/tcp_connection.hpp
+    detail/network/tcp_connection_fwd.hpp
     durable/heap.hpp
     durable/storage.hpp
     metrics/metrics.hpp
@@ -112,35 +111,36 @@ set(include_HEADERS
     )
 
 set(SOURCES
-    detail/client/protocol/initiate_request.cpp
-    detail/quorum/client_view.cpp
-    detail/quorum/server_view.cpp
-    detail/quorum/view.cpp
-    detail/quorum/server.cpp
-    detail/strategy/basic_paxos/factory.cpp
-    detail/strategy/basic_paxos/protocol/strategy.cpp
+        detail/client/initiate_request.cpp
+        detail/client/client_view.cpp
+        detail/server/server_view.cpp
+        detail/util/view.cpp
+        detail/server/server.cpp
+        detail/strategy/factory_impl.cpp
+        detail/strategy/strategy_impl.cpp
     detail/command.cpp
     detail/command_dispatcher.cpp
     detail/error.cpp
-    detail/io_thread.cpp
-    detail/parser.cpp
+        detail/network/io_thread.cpp
+        detail/network/parser.cpp
     detail/paxos_context.cpp
-    detail/tcp_connection.cpp
+        detail/network/tcp_connection.cpp
     durable/heap.cpp
     durable/storage.cpp
-    metrics/metrics.cpp
+    #metrics/metrics.cpp
     client.cpp
     configuration.cpp
     server.cpp
    )
 
 set(EXTERN_THIRDPARTY_INCLUDE_PATH
-    ../3rdparty/prometheus/include
+    ${PROJECT_SOURCE_DIR}
+    ${PROJECT_SOURCE_DIR}/3rdparty/prometheus/include
     )
 INCLUDE_DIRECTORIES(${EXTERN_THIRDPARTY_INCLUDE_PATH})
 
 set(EXTERN_THIRDPARTY_LINK_PATH
-    ../3rdparty/prometheus/lib64
+    ${PROJECT_SOURCE_DIR}/3rdparty/prometheus/lib64
     )
 LINK_DIRECTORIES(${EXTERN_THIRDPARTY_LINK_PATH})
 set(EXTERN_THIRDPARTY_LIBS

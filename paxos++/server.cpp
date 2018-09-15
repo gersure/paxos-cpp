@@ -8,8 +8,8 @@
 #include "exception/exception.hpp"
 
 #include "detail/util/debug.hpp"
-#include "detail/parser.hpp"
-#include "detail/tcp_connection.hpp"
+#include "detail/network/parser.hpp"
+#include "detail/network/tcp_connection.hpp"
 #include "detail/command_dispatcher.hpp"
 #include "server.hpp"
 
@@ -31,7 +31,7 @@ server::server (
    uint16_t                             port,
    callback_type const &                processor,
    paxos::configuration &               configuration)
-   : server (io_thread_.io_service (),
+   : server (io_thread_.io_context (),
              host,
              port,
              processor,
@@ -41,7 +41,7 @@ server::server (
 }
 
 server::server (
-   boost::asio::io_service &            io_service,
+   boost::asio::io_context &            io_service,
    std::string const &                  host,
    uint16_t                             port,
    callback_type const &                processor)
@@ -54,7 +54,7 @@ server::server (
 }
 
 server::server (
-   boost::asio::io_service &            io_service,
+   boost::asio::io_context &            io_service,
    std::string const &                  host,
    uint16_t                             port,
    callback_type const &                processor,
@@ -124,7 +124,7 @@ void
 server::accept ()
 {
    detail::tcp_connection_ptr connection =
-      detail::tcp_connection::create (acceptor_.get_io_service ());
+      detail::tcp_connection::create (acceptor_.get_io_context ());
 
    acceptor_.async_accept (connection->socket (),
                            std::bind (&server::handle_accept,

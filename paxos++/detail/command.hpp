@@ -13,7 +13,7 @@
 #include <boost/serialization/access.hpp>
 #include <boost/serialization/map.hpp>
 
-#include "quorum/server.hpp"
+#include "server/server.hpp"
 
 #include "error.hpp"
 

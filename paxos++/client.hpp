@@ -8,10 +8,10 @@
 #include <future>
 #include <initializer_list>
 
-#include "detail/io_thread.hpp"
-#include "detail/quorum/client_view.hpp"
+#include "paxos++/detail/network/io_thread.hpp"
+#include "paxos++/detail/client/client_view.hpp"
 #include "detail/request_queue/queue.hpp"
-#include "detail/client/protocol/request.hpp"
+#include "detail/client/request.hpp"
 
 #include "configuration.hpp"
 
@@ -61,21 +61,21 @@ namespace paxos {
   \endcode
 
 
-  Setup multiple clients that makes use of an external io_service object, and as such 
+  Setup multiple clients that makes use of an external io_context object, and as such 
   can share the same thread:
 
   \code{.cpp}
   
-  boost::asio::io_service io_service;
+  boost::asio::io_context io_service;
 
-  // This prevents the io_service from running out of work
+  // This prevents the io_context from running out of work
   boost::asio::io_service::work work (io_service);
 
   // Launch new thread in the background which calls io_service.run ()
   boost::thread io_thread (boost::bind (&boost::asio::io_service::run,
                                         &io_service));
 
-  // Note that we share the same io_service here, and thus both clients share the same
+  // Note that we share the same io_context here, and thus both clients share the same
   // worker thread.
   paxos::client client1 (io_service);
   paxos::client client2 (io_service);
@@ -103,10 +103,10 @@ public:
 
    /*!
      \brief Opens client
-     \param io_service  Boost.Asio io_service object, which represents the link to the OS'es i/o services
+     \param io_context  Boost.Asio io_context object, which represents the link to the OS'es i/o services
    */
    client (
-      boost::asio::io_service &         io_service);
+      boost::asio::io_context &         io_service);
 
    /*!
      \brief Destructor
@@ -169,7 +169,7 @@ private:
 
 
    detail::io_thread                                                    io_thread_;
-   boost::asio::io_service &                                            io_service_;
+   boost::asio::io_context &                                            io_service_;
    detail::quorum::client_view                                          quorum_;
    detail::request_queue::queue <detail::client::protocol::request>     request_queue_;
 

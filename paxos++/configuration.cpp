@@ -1,6 +1,6 @@
 #include "durable/storage.hpp"
 #include "durable/heap.hpp"
-#include "detail/strategy/basic_paxos/factory.hpp"
+#include "detail/strategy/factory_impl.hpp"
 #include "configuration.hpp"
 
 #include "detail/util/debug.hpp"
@@ -11,7 +11,7 @@ configuration::configuration ()
    : timeout_ (3000),
      majority_factor_ (0.5),
      durable_storage_ (new durable::heap ()),
-     strategy_factory_ (new detail::strategy::basic_paxos::factory (*this))
+     strategy_factory_ (new detail::strategy::basic_paxos::factory_impl (*this))
 {
 }
 

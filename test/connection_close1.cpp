@@ -9,9 +9,9 @@
 #include <paxos++/configuration.hpp>
 #include <paxos++/detail/util/debug.hpp>
 
-#include <paxos++/detail/tcp_connection.hpp>
+#include <paxos++/detail/network/tcp_connection.hpp>
 #include <paxos++/detail/strategy/factory.hpp>
-#include <paxos++/detail/strategy/basic_paxos/protocol/strategy.hpp>
+#include <paxos++/detail/strategy/strategy_impl.hpp>
 
 /*!
   This is our "bad apple" paxos strategy, which will close the connection whenever
@@ -19,12 +19,12 @@
   marked as dead, and make the paxos call recover the next time it's made.
  */
 
-class test_strategy : public paxos::detail::strategy::basic_paxos::protocol::strategy
+class test_strategy : public paxos::detail::strategy::basic_paxos::protocol::strategy_impl
 {
 public:
    test_strategy (
       paxos::durable::storage & storage)
-      : paxos::detail::strategy::basic_paxos::protocol::strategy::strategy (storage) {}
+      : paxos::detail::strategy::basic_paxos::protocol::strategy_impl::strategy_impl (storage) {}
 
    /*!
      \brief Overloaded from parent

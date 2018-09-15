@@ -12,6 +12,7 @@
 #include <boost/thread/mutex.hpp>
 
 #include "../util/debug.hpp"
+#include "../util/singleton.hpp"
 
 namespace paxos { namespace detail { namespace request_queue {
 

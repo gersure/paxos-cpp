@@ -2,7 +2,7 @@
 
 #include "strategy/strategy.hpp"
 
-#include "tcp_connection.hpp"
+#include "network/tcp_connection.hpp"
 #include "paxos_context.hpp"
 #include "command_dispatcher.hpp"
 
